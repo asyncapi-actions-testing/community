@@ -1,0 +1,92 @@
+{
+  "$id": "root",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "description": "List of all maintainers and information about them.",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Full name of the person, a nice human-readable name",
+        "examples": [
+          "Lukasz Gornicki"
+        ]
+      },
+      "github": {
+        "type": "string",
+        "minLength": 1,
+        "description": "It must be a valid GitHub handle. It is used to provide a link to the person's profile on GitHub and display the profile picture on the AsyncAPI website",
+        "examples": [
+          "derberg"
+        ]
+      },
+      "linkedin": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Only the LinkedIn profile name, everything you see after the https://www.linkedin.com/in/ link. It is used on the AsyncAPI website to provide a link to the profile.",
+        "examples": [
+          "lukasz-gornicki-a621914"
+        ]
+      },
+      "twitter": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Twitter profile name. It is used on the AsyncAPI website to provide a link to the profile.",
+        "examples": [
+          "derberq"
+        ]
+      },
+      "availableForHire": {
+        "type": "boolean",
+        "description": "It is not a mandatory property as it is set to false by default. Nevertheless, please add it, even if 'false,' for better clarity. We use it on the AsyncAPI website to visually indicate whether the person is available for hire.",
+        "default": false,
+        "examples": [
+          true,
+          false
+        ]
+      },
+      "company": {
+        "type": "string",
+        "minLength": 1,
+        "description": "It must be clear if the maintainer is affiliated with a company. AsyncAPI's open governance model allows no more than 1/4 of maintainers to be from the same company. If you are an individual contributor, you do not have to provide this property. In the UI, we will mark you as an individual contributor if this property is missing.",
+        "examples": [
+          "Postman"
+        ]
+      },
+      "slack": {
+        "type": "string",
+        "description": "It must be a valid Slack ID. It is the ID of the person's profile in Slack",
+        "examples": [
+          "U01QPAP1QWE"
+        ]
+      },
+      "repos": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string",
+          "description": "List of repository names that must match the GitHub name of the repository. It is used to provide a link to the repository on the AsyncAPI website",
+          "examples": [
+            "avro-schema-parser"
+          ]
+        }
+      },
+      "isTscMember": {
+        "type": "boolean",
+        "description": "Indicates whether the maintainer is a member of the technical steering committee",
+        "default": false,
+        "examples": [
+          true,
+          false
+        ]
+      }
+    },
+    "required": [
+      "github",
+      "repos"
+    ],
+    "additionalProperties": false
+  }
+}
