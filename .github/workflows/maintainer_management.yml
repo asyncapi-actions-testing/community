@@ -248,9 +248,11 @@ jobs:
 
       - name: Commit and push
         run: |
+          git config --global user.email "info@asyncapi.io"
+          git config --global user.name "asyncapi-bot"
           git add .
           git commit -m "Update Emeritus.yaml"
-          git push https://${{ secrets.GH_TOKEN}}@github.com/asyncapi/community update-emeritus-${{ github.run_id }}
+          git push https://${{ secrets.GH_TOKEN}}@github.com/${{ github.repository_owner }}
 
       - name: Create PR
         run: |
