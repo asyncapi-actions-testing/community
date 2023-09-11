@@ -128,19 +128,6 @@
     - parser-js
     - parser-api
     - simulator
-- name: Khuda Dad Nomani
-  github: khudadad414
-  twitter: KhudaDadNomani
-  linkedin: khudadadnomani
-  slack: U01RVRD1TCL
-  availableForHire: false
-  company: Postman
-  isTscMember: true
-  repos:
-    - bindings
-    - glee
-    - .github
-    - optimizer
 - name: Laurent Broudoux
   github: lbroudoux
   twitter: lbroudoux
@@ -160,33 +147,6 @@
   isTscMember: true
   repos:
     - avro-schema-parser
-- name: Lukasz Gornicki
-  github: derberg
-  linkedin: lukasz-gornicki-a621914
-  slack: UD698Q5LM
-  twitter: derberq
-  availableForHire: false
-  company: Postman
-  isTscMember: true
-  repos:
-    - avro-schema-parser
-    - openapi-schema-parser
-    - chatbot
-    - diff
-    - cli
-    - generator-filters
-    - generator-hooks
-    - github-action-for-generator
-    - generator
-    - nodejs-template
-    - nodejs-ws-template
-    - parser-js
-    - playground
-    - spec
-    - spec-json-schemas
-    - template-for-generator-templates
-    - website
-    - bundler
 - name: Maciej Urbańczyk
   github: magicmatatjahu
   availableForHire: false
@@ -516,3 +476,12 @@
   repos:
     - website
     - community
+- github: derberg
+  isTscMember: false
+  repos:
+    - cupid
+  twitter: derberq
+- github: KhudaDad414
+  isTscMember: false
+  repos:
+    - cupid
